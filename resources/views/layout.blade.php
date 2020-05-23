@@ -18,14 +18,12 @@
 <!-- Top Bar -->
 <x-nav/>
 <!-- #Top Bar -->
-<section>
-    <!-- Left Sidebar -->
-    <x-leftSidebar/>
-    <!-- #END# Left Sidebar -->
-    <!-- Right Sidebar -->
-   <x-rightBar/>
-    <!-- #END# Right Sidebar -->
-</section>
+<!-- Left Sidebar -->
+<x-leftSidebar/>
+<!-- #END# Left Sidebar -->
+<!-- Right Sidebar -->
+<x-rightBar/>
+<!-- #END# Right Sidebar -->
 
 <section class="content">
     <div class="container-fluid">
