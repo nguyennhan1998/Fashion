@@ -11,7 +11,7 @@
 <script src="{{asset("plugins/progressbar/progressbar.min.js")}}"></script>
 <script src="{{asset("plugins/parallax-js-master/parallax.min.js")}}"></script>
 <script src="{{asset("js/custom.js" )}}"></script>
-
+@yield("script")
 
 
 {{----}}

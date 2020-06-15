@@ -33,6 +33,8 @@
                             <th>Product Name</th>
                             <th>Product Image</th>
                             <th>Description</th>
+                            <th>Size</th>
+                            <th>Color</th>
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Category</th>
@@ -50,6 +52,8 @@
                                 <td>{{$product->__get("product_name")}}</td>
                                 <td><img src="{{$product->getImage()}}" width="50" height="50"/></td>
                                 <td>{{$product->__get("product_desc")}}</td>
+                                <td>{{$product->__get("product_color")}}</td>
+                                <td>{{$product->__get("product_size")}}</td>
                                 <td>{{number_format($product->__get("price"))}}$</td>
                                 <td>{{$product->__get("qty")}}</td>
                                 <td>{{$product->Category->__get("category_name")}}</td>

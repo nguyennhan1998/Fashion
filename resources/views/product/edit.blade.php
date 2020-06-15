@@ -66,6 +66,25 @@
                             @enderror
                         </div>
                     </div>
+                        <label>Product size</label>
+                        <div class="form-group">
+                            <div class="form-line">
+                                <input class="form-control @error("product_size") is-invalid @enderror" type="text" name="product_size" placeholder="product size.."/>
+                                @error("product_size")
+                                <span class="error invalid-feedback">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <label>Product color</label>
+                        <div class="form-group">
+                            <div class="form-line">
+                                <input class="form-control @error("product_color") is-invalid @enderror" type="text" name="product_color" placeholder="Product color.."/>
+                                @error("product_color")
+                                <span class="error invalid-feedback">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
 
                     <label>Quantity</label>
                     <div class="form-group">

@@ -13,6 +13,8 @@ class Product extends Model
         "product_name",
         "product_image",
         "product_desc",
+        "product_color",
+        "product_size",
         "price",
         "qty",
         "category_id",
