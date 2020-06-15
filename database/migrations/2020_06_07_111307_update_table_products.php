@@ -15,6 +15,9 @@ class UpdateTableProducts extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->string("slug")->unique()->after("product_name")->nullable();
+            $table->string("product_size")->after("product_desc")->nullable();
+            $table->string("product_color")->after("product_desc")->nullable();
+
         });
     }
 
@@ -27,6 +30,9 @@ class UpdateTableProducts extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->dropColumn(["slug"]);
+            $table->dropColumn(["product_size"]);
+            $table->dropColumn(["product_color"]);
+
         });
     }
 }
