@@ -28,13 +28,7 @@
         </div>
     </header>
 @section("content")
-    <!-- Page Info -->
-    <div class="page-info-section page-info-big">
-        <div class="container">
-            <h2>Dresses</h2>
-            <div class="site-breadcrumb">
-                <a href="/home">Home</a> /
-                <span>{{$category->__get("category_name")}}</span>
+
             </div>
             <img src="{{asset("img/categorie-page-top.png")}}" alt="" class="cata-top-pic">
         </div>
