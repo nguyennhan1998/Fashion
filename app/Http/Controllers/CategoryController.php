@@ -60,6 +60,6 @@ class CategoryController extends Controller
             $category->delete();
         }catch (\Exception $exception){
         }
-        return redirect()->to("admin/list-category");
+        return redirect()->to("/admin/list-category");
     }
 }
