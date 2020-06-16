@@ -24,7 +24,7 @@ class ProductController extends Controller
 
     public function saveProduct(Request $request){
         $request->validate([
-            "product_name"=>"required|string|min:6|unique:products",
+            "product_name"=>"required|string|min:2|unique:products",
             "product_desc"=>"required|string|min:2|unique:products",
             "product_color"=>"required|string|min:2",
             "product_size"=>"required|string",
@@ -38,7 +38,7 @@ class ProductController extends Controller
             //xử lí để đưa ảnh nên media trong public sau đó đưa nguồn file cho vào biến
             if($request->hasFile("product_image")){
                 $file = $request->file("product_image");
-                $allow = ["png","jpg","jpeg","gif"];
+                $allow = ["png","jpg","jpeg","gif","jfif"];
                 $extName = $file->getClientOriginalExtension();//lay dưới
                 if(in_array($extName,$allow)){
                     $fileName = time().$file->getClientOriginalName();//get fileName
@@ -89,7 +89,7 @@ class ProductController extends Controller
             $product_image = $product->get("product_image");
             if($request->hasFile("product_image")){
                 $file = $request->file("product_image");
-                $allow = ["png","jpg","jpeg","gif"];
+                $allow = ["png","jpg","jpeg","gif","jfif"];
                 $extName = $file->getClientOriginalExtension();
                 if(in_array($extName,$allow)){
                     $fileName = time().$file->getClientOriginalName(); //  lấy tên gốc original của file gửi lên từ client

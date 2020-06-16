@@ -13,9 +13,9 @@
                 <div class="home_title">Category Page</div>
                 <div class="breadcrumbs d-flex flex-column align-items-center justify-content-center">
                     <ul class="d-flex flex-row align-items-start justify-content-start text-center">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Woman</a></li>
-                        <li>New Products</li>
+                        @foreach($categories as $f)
+                            <li><a href="#">{{$f->__get("category_name")}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
