@@ -1,464 +1,321 @@
 @extends("frontend.layout")
+@section("header")
+    <!-- Header section -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <!-- logo -->
+            <div class="site-logo">
+                <img src="{{asset("img/logo.png")}}" alt="logo">
+            </div>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="header-right">
+                <a href="cart.html" class="card-bag"><img src="{{asset("img/icons/bag.png")}}" alt=""><span>2</span></a>
+                <a href="#" class="search"><img src="{{asset("img/icons/search.png")}}" alt=""></a>
+            </div>
+            <!-- site menu -->
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">Man</a></li>
+                <li><a href="#">LookBook</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header section end -->
+@endsection
 @section("content")
-    <div class="super_container_inner">
-        <div class="super_overlay"></div>
-
-        <!-- Home -->
-
-        <div class="home">
-            <!-- Home Slider -->
-            <div class="home_slider_container">
-                <div class="owl-carousel owl-theme home_slider">
-
-                    <!-- Slide -->
-                    <div class="owl-item">
-                        <div class="background_image" style="background-image:url(images/home.jpg)"></div>
-                        <div class="container fill_height">
-                            <div class="row fill_height">
-                                <div class="col fill_height">
-                                    <div class="home_container d-flex flex-column align-items-center justify-content-start">
-                                        <div class="home_content">
-                                            <div class="home_title">New Arrivals</div>
-                                            <div class="home_subtitle">Summer Wear</div>
-                                            <div class="home_items">
-                                                <div class="row">
-                                                    <div class="col-sm-3 offset-lg-1">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_1.jpg" alt=""></a></div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
-                                                        <div class="product home_item_large">
-                                                            <div class="product_tag d-flex flex-column align-items-center justify-content-center">
-                                                                <div>
-                                                                    <div>from</div>
-                                                                    <div>$3<span>.99</span></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product_image"><img src="images/home_2.jpg" alt=""></div>
-                                                            <div class="product_content">
-                                                                <div class="product_info d-flex flex-row align-items-start justify-content-start">
-                                                                    <div>
-                                                                        <div>
-                                                                            <div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-                                                                            <div class="product_category">In <a href="category.html">Category</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ml-auto text-right">
-                                                                        <div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                                                        <div class="product_price text-right">$3<span>.99</span></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product_buttons">
-                                                                    <div class="text-right d-flex flex-row align-items-start justify-content-start">
-                                                                        <div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/heart.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                        <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/cart_2.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_3.jpg" alt=""></a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide -->
-                    <div class="owl-item">
-                        <div class="background_image" style="background-image:url(images/home.jpg)"></div>
-                        <div class="container fill_height">
-                            <div class="row fill_height">
-                                <div class="col fill_height">
-                                    <div class="home_container d-flex flex-column align-items-center justify-content-start">
-                                        <div class="home_content">
-                                            <div class="home_title">Popular</div>
-                                            <div class="home_subtitle">Summer Wear</div>
-                                            <div class="home_items">
-                                                <div class="row">
-                                                    <div class="col-sm-3 offset-lg-1">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_1.jpg" alt=""></a></div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
-                                                        <div class="product home_item_large">
-                                                            <div class="product_tag d-flex flex-column align-items-center justify-content-center">
-                                                                <div>
-                                                                    <div>from</div>
-                                                                    <div>$3<span>.99</span></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product_image"><img src="images/product_1.jpg" alt=""></div>
-                                                            <div class="product_content">
-                                                                <div class="product_info d-flex flex-row align-items-start justify-content-start">
-                                                                    <div>
-                                                                        <div>
-                                                                            <div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-                                                                            <div class="product_category">In <a href="category.html">Category</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ml-auto text-right">
-                                                                        <div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                                                        <div class="product_price text-right">$3<span>.99</span></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product_buttons">
-                                                                    <div class="text-right d-flex flex-row align-items-start justify-content-start">
-                                                                        <div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/heart.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                        <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/cart_2.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_3.jpg" alt=""></a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide -->
-                    <div class="owl-item">
-                        <div class="background_image" style="background-image:url(images/home.jpg)"></div>
-                        <div class="container fill_height">
-                            <div class="row fill_height">
-                                <div class="col fill_height">
-                                    <div class="home_container d-flex flex-column align-items-center justify-content-start">
-                                        <div class="home_content">
-                                            <div class="home_title">Trendsetters</div>
-                                            <div class="home_subtitle">Summer Wear</div>
-                                            <div class="home_items">
-                                                <div class="row">
-                                                    <div class="col-sm-3 offset-lg-1">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_1.jpg" alt=""></a></div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
-                                                        <div class="product home_item_large">
-                                                            <div class="product_tag d-flex flex-column align-items-center justify-content-center">
-                                                                <div>
-                                                                    <div>from</div>
-                                                                    <div>$3<span>.99</span></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product_image"><img src="images/product_2.jpg" alt=""></div>
-                                                            <div class="product_content">
-                                                                <div class="product_info d-flex flex-row align-items-start justify-content-start">
-                                                                    <div>
-                                                                        <div>
-                                                                            <div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-                                                                            <div class="product_category">In <a href="category.html">Category</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ml-auto text-right">
-                                                                        <div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                                                        <div class="product_price text-right">$3<span>.99</span></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product_buttons">
-                                                                    <div class="text-right d-flex flex-row align-items-start justify-content-start">
-                                                                        <div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/heart.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                        <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/cart_2.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_3.jpg" alt=""></a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide -->
-                    <div class="owl-item">
-                        <div class="background_image" style="background-image:url(images/home.jpg)"></div>
-                        <div class="container fill_height">
-                            <div class="row fill_height">
-                                <div class="col fill_height">
-                                    <div class="home_container d-flex flex-column align-items-center justify-content-start">
-                                        <div class="home_content">
-                                            <div class="home_title">Premium Items</div>
-                                            <div class="home_subtitle">Summer Wear</div>
-                                            <div class="home_items">
-                                                <div class="row">
-                                                    <div class="col-sm-3 offset-lg-1">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_1.jpg" alt=""></a></div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
-                                                        <div class="product home_item_large">
-                                                            <div class="product_tag d-flex flex-column align-items-center justify-content-center">
-                                                                <div>
-                                                                    <div>from</div>
-                                                                    <div>$3<span>.99</span></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product_image"><img src="images/product_3.jpg" alt=""></div>
-                                                            <div class="product_content">
-                                                                <div class="product_info d-flex flex-row align-items-start justify-content-start">
-                                                                    <div>
-                                                                        <div>
-                                                                            <div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-                                                                            <div class="product_category">In <a href="category.html">Category</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ml-auto text-right">
-                                                                        <div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                                                        <div class="product_price text-right">$3<span>.99</span></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product_buttons">
-                                                                    <div class="text-right d-flex flex-row align-items-start justify-content-start">
-                                                                        <div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/heart.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                        <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-                                                                            <div><div><img src="images/cart_2.svg" alt=""><div>+</div></div></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="home_item_side"><a href="product.html"><img src="images/home_3.jpg" alt=""></a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="home_slider_nav home_slider_nav_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-                <div class="home_slider_nav home_slider_nav_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-
-                <!-- Home Slider Dots -->
-
-                <div class="home_slider_dots_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="home_slider_dots">
-                                    <ul id="home_slider_custom_dots" class="home_slider_custom_dots d-flex flex-row align-items-center justify-content-center">
-                                        <li class="home_slider_custom_dot active">01</li>
-                                        <li class="home_slider_custom_dot">02</li>
-                                        <li class="home_slider_custom_dot">03</li>
-                                        <li class="home_slider_custom_dot">04</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Hero section -->
+    <section class="hero-section set-bg" data-setbg="img/bg.jpg">
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item">
+                <div class="hs-left"><img src="img/slider-img.png" alt=""></div>
+                <div class="hs-right">
+                    <div class="hs-content">
+                        <div class="price">from $19.90</div>
+                        <h2><span>2018</span> <br>summer collection</h2>
+                        <a href="" class="site-btn">Shop NOW!</a>
                     </div>
                 </div>
-
             </div>
-        </div>
-
-        <!-- Products -->
-
-        <div class="products">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <div class="section_title text-center">Popular on Little Closet</div>
-                    </div>
-                </div>
-                <div class="row page_nav_row">
-                    <div class="col">
-                        <div class="page_nav">
-                            <ul class="d-flex flex-row align-items-start justify-content-center">
-                                @foreach($categories as $f)
-                                    <li><a href="#">{{$f->__get("category_name")}}</a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row products_row">
-
-                    <!-- Product -->
-                    @foreach($product as $p)
-                    <div class="col-xl-4 col-md-6">
-                        <div class="product">
-                            <div class="product_image">
-                                <img src="{{$f->getImage()}}" alt="">
-                            </div>
-                            <div class="product_content">
-                                <div class="product_info d-flex flex-row align-items-start justify-content-start">
-                                    <div>
-                                        <div>
-                                            <div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-                                            <div class="product_category">In <a href="category.html">Category</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="ml-auto text-right">
-                                        <div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                                        <div class="product_price text-right">$3<span>.99</span></div>
-                                    </div>
-                                </div>
-                                <div class="product_buttons">
-                                    <div class="text-right d-flex flex-row align-items-start justify-content-start">
-                                        <div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-                                            <div><div><img src="images/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
-                                        </div>
-                                        <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-                                            <div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-
-                </div>
-                <div class="row load_more_row">
-                    <div class="col">
-                        <div class="button load_more ml-auto mr-auto"><a href="#">load more</a></div>
+            <div class="hs-item">
+                <div class="hs-left"><img src="img/slider-img.png" alt=""></div>
+                <div class="hs-right">
+                    <div class="hs-content">
+                        <div class="price">from $19.90</div>
+                        <h2><span>2018</span> <br>summer collection</h2>
+                        <a href="" class="site-btn">Shop NOW!</a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Hero section end -->
 
-        <!-- Boxes -->
 
-        <div class="boxes">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="boxes_container d-flex flex-row align-items-start justify-content-between flex-wrap">
-
-                            <!-- Box -->
-                            <div class="box">
-                                <div class="background_image" style="background-image:url(images/box_1.jpg)"></div>
-                                <div class="box_content d-flex flex-row align-items-center justify-content-start">
-                                    <div class="box_left">
-                                        <div class="box_image">
-                                            <a href="category.html">
-                                                <div class="background_image" style="background-image:url(images/box_1_img.jpg)"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="box_right text-center">
-                                        <div class="box_title">Trendsetter Collection</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Box -->
-                            <div class="box">
-                                <div class="background_image" style="background-image:url(images/box_2.jpg)"></div>
-                                <div class="box_content d-flex flex-row align-items-center justify-content-start">
-                                    <div class="box_left">
-                                        <div class="box_image">
-                                            <a href="category.html">
-                                                <div class="background_image" style="background-image:url(images/box_2_img.jpg)"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="box_right text-center">
-                                        <div class="box_title">Popular Choice</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Box -->
-                            <div class="box">
-                                <div class="background_image" style="background-image:url(images/box_3.jpg)"></div>
-                                <div class="box_content d-flex flex-row align-items-center justify-content-start">
-                                    <div class="box_left">
-                                        <div class="box_image">
-                                            <a href="category.html">
-                                                <div class="background_image" style="background-image:url(images/box_3_img.jpg)"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="box_right text-center">
-                                        <div class="box_title">Popular Choice</div>
-                                    </div>
-                                </div>
-                            </div>
-
+    <!-- Intro section -->
+    <section class="intro-section spad pb-0">
+        <div class="section-title">
+            <h2>pemium products</h2>
+            <p>We recommend</p>
+        </div>
+        <div class="intro-slider">
+            <ul class="slidee">
+                <li>
+                    <div class="intro-item">
+                        <figure>
+                            <img src="img/intro/1.jpg" alt="#">
+                        </figure>
+                        <div class="product-info">
+                            <h5>Pink Sunglasses</h5>
+                            <p>$319.50</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
                         </div>
                     </div>
+                </li>
+                <li>
+                    <div class="intro-item">
+                        <figure>
+                            <img src="img/intro/2.jpg" alt="#">
+                        </figure>
+                        <div class="product-info">
+                            <h5>Black Nighty</h5>
+                            <p>$319.50</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="intro-item">
+                        <figure>
+                            <img src="img/intro/3.jpg" alt="#">
+                            <div class="bache">NEW</div>
+                        </figure>
+                        <div class="product-info">
+                            <h5>Yellow Sholder bag</h5>
+                            <p>$319.50</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="intro-item">
+                        <figure>
+                            <img src="img/intro/4.jpg" alt="#">
+                        </figure>
+                        <div class="product-info">
+                            <h5>Yellow Sunglasses</h5>
+                            <p>$319.50</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="intro-item">
+                        <figure>
+                            <img src="img/intro/5.jpg" alt="#">
+                        </figure>
+                        <div class="product-info">
+                            <h5>Black Sholder bag</h5>
+                            <p>$319.50</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="scrollbar">
+                <div class="handle">
+                    <div class="mousearea"></div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Intro section end -->
 
-        <!-- Features -->
 
-        <div class="features">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Feature -->
-                    <div class="col-lg-4 feature_col">
-                        <div class="feature d-flex flex-row align-items-start justify-content-start">
-                            <div class="feature_left">
-                                <div class="feature_icon"><img src="images/icon_1.svg" alt=""></div>
-                            </div>
-                            <div class="feature_right d-flex flex-column align-items-start justify-content-center">
-                                <div class="feature_title">Fast Secure Payments</div>
-                            </div>
-                        </div>
+    <!-- Featured section -->
+    <div class="featured-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="featured-item">
+                        <img src="img/featured/featured-1.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
                     </div>
-
-                    <!-- Feature -->
-                    <div class="col-lg-4 feature_col">
-                        <div class="feature d-flex flex-row align-items-start justify-content-start">
-                            <div class="feature_left">
-                                <div class="feature_icon ml-auto mr-auto"><img src="images/icon_2.svg" alt=""></div>
-                            </div>
-                            <div class="feature_right d-flex flex-column align-items-start justify-content-center">
-                                <div class="feature_title">Premium Products</div>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="featured-item mb-0">
+                        <img src="img/featured/featured-2.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
                     </div>
-
-                    <!-- Feature -->
-                    <div class="col-lg-4 feature_col">
-                        <div class="feature d-flex flex-row align-items-start justify-content-start">
-                            <div class="feature_left">
-                                <div class="feature_icon"><img src="images/icon_3.svg" alt=""></div>
-                            </div>
-                            <div class="feature_right d-flex flex-column align-items-start justify-content-center">
-                                <div class="feature_title">Free Delivery</div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-    @endsection
+    <!-- Featured section end -->
+
+
+    <!-- Product section -->
+    <section class="product-section spad">
+        <div class="container">
+            <ul class="product-filter controls">
+                <li class="control" data-filter=".new">New arrivals</li>
+                <li class="control" data-filter="all">Recommended</li>
+                <li class="control" data-filter=".best">Best sellers</li>
+            </ul>
+            <div class="row" id="product-filter">
+                @foreach($most_views as $m)
+                    <div class="mix col-lg-3 col-md-6 best">
+                        <div class="product-item">
+                            <figure>
+                                <img src="{{asset($m->getImage())}}" alt="">
+                                <div class="pi-meta">
+                                    <div class="pi-m-left">
+                                        <img src="img/icons/eye.png" alt="">
+                                        <p>quick view</p>
+                                    </div>
+                                    <div class="pi-m-right">
+                                        <img src="img/icons/heart.png" alt="">
+                                        <p>save</p>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="product-info">
+                                <h6>{{$m->__get("product_name")}}</h6>
+                                <p>{{$m->getPrice()}}</p>
+                                <a href="javascript:void(0);" onclick="addToCart({{$m->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                @foreach($lastest_1 as $l)
+                    <div class="mix col-lg-3 col-md-6 new">
+                        <div class="product-item">
+                            <figure>
+                                <img src="{{asset($l->getImage())}}" alt="">
+                                <div class="bache">NEW</div>
+                                <div class="pi-meta">
+                                    <div class="pi-m-left">
+                                        <img src="img/icons/eye.png" alt="">
+                                        <p>quick view</p>
+                                    </div>
+                                    <div class="pi-m-right">
+                                        <img src="img/icons/heart.png" alt="">
+                                        <p>save</p>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="product-info">
+                                <h6>{{$l->__get("product_name)")}}</h6>
+                                <p>{{$l->getPrice()}}</p>
+                                <a href="javascript:void(0);" onclick="addToCart({{$l->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                @foreach($featureds as $f)
+                    <div class="mix col-lg-3 col-md-6 new best">
+                        <div class="product-item">
+                            <figure>
+                                <img src="{{asset($f->getImage())}}" alt="">
+                                <div class="bache sale">SALE</div>
+                                <div class="pi-meta">
+                                    <div class="pi-m-left">
+                                        <img src="img/icons/eye.png" alt="">
+                                        <p>quick view</p>
+                                    </div>
+                                    <div class="pi-m-right">
+                                        <img src="img/icons/heart.png" alt="">
+                                        <p>save</p>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="product-info">
+                                <h6>{{$f->__get("product_name")}}</h6>
+                                <p> {{$f->getPrice()}}</span></p>
+                                <a href="javascript:void(0);" onclick="addToCart({{$f->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="product-item">
+                    <figure>
+                        <img src="img/products/8.jpg" alt="">
+                        <div class="pi-meta">
+                            <div class="pi-m-left">
+                                <img src="img/icons/eye.png" alt="">
+                                <p>quick view</p>
+                            </div>
+                            <div class="pi-m-right">
+                                <img src="img/icons/heart.png" alt="">
+                                <p>save</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <div class="product-info">
+                        <h6>Denim men shirt</h6>
+                        <p>$32.20 <span>RRP 64.40</span></p>
+                        <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Product section end -->
+
+
+    <!-- Blog section -->
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="featured-item">
+                        <img src="img/featured/featured-3.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h4 class="bgs-title">from the blog</h4>
+                    <div class="blog-item">
+                        <div class="bi-thumb">
+                            <img src="img/blog-thumb/1.jpg" alt="">
+                        </div>
+                        <div class="bi-content">
+                            <h5>10 tips to dress like a queen</h5>
+                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
+                            <a href="#" class="readmore">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="bi-thumb">
+                            <img src="img/blog-thumb/2.jpg" alt="">
+                        </div>
+                        <div class="bi-content">
+                            <h5>Fashion Outlet products</h5>
+                            <div class="bi-meta">July 02, 2018 | By Jessica Smith</div>
+                            <a href="#" class="readmore">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="bi-thumb">
+                            <img src="img/blog-thumb/3.jpg" alt="">
+                        </div>
+                        <div class="bi-content">
+                            <h5>the little black dress just for you</h5>
+                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
+                            <a href="#" class="readmore">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog section end -->
+@endsection
