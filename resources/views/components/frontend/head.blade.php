@@ -1,21 +1,26 @@
 <head>
-    <title>Little Closet</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Little Closet template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset("styles/bootstrap-4.1.2/bootstrap.min.css")}}">
-    <link href="{{asset("plugins/font-awesome-4.7.0/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{asset("plugins/OwlCarousel2-2.2.1/owl.carousel.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{asset("plugins/OwlCarousel2-2.2.1/owl.theme.default.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{asset("plugins/OwlCarousel2-2.2.1/animate.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{asset("styles/main_styles.css")}}">
-    <link rel="stylesheet" type="text/css" href={{asset("styles/responsive.css")}}>
-    @yield("css")
-{{--    category--}}
+    <title>The Plaza - eCommerce Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="The Plaza eCommerce Template">
+    <meta name="keywords" content="plaza, eCommerce, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="{{asset("img/favicon.ico")}}" rel="shortcut icon"/>
 
-{{--    --}}
-{{--    <link href={{asset("plugins/bootstrap/css/bootstrap.css")}} rel="stylesheet">--}}
-{{--    <link href={{asset("css/style.css")}} rel="stylesheet">--}}
-{{--    <link href={{asset("https://fonts.googleapis.com/icon?family=Material+Icons")}} rel="stylesheet" type="text/css">--}}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}"/>
+    <link rel="stylesheet" href="{{asset("css/font-awesome.min.css")}}"/>
+    <link rel="stylesheet" href="{{asset("css/owl.carousel.css")}}"/>
+    <link rel="stylesheet" href="{{asset("css/style1.css")}}"/>
+    <link rel="stylesheet" href="{{asset("css/animate.css")}}"/>
+
+
+<!--[if lt IE 9]>
+    <script src="{{asset("https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")}}"></script>
+    <script src="{{asset("https://oss.maxcdn.com/respond/1.4.2/respond.min.js")}}"></script>
+    <![endif]-->
+
 </head>
