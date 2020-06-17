@@ -29,14 +29,6 @@
     </header>
 @section("content")
 
-    <!-- Page Info -->
-    <div class="page-info-section page-info-big">
-        <div class="container">
-            <h2>Dresses</h2>
-            <div class="site-breadcrumb">
-                <a href="/home">Home</a> /
-                <span>{{$category->__get("category_name")}}</span>
-
             </div>
             <img src="{{asset("img/categorie-page-top.png")}}" alt="" class="cata-top-pic">
         </div>
@@ -69,27 +61,19 @@
             </div>
             <div class="row">
                 @forelse($products as $p)
-
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <figure>
-                                <img src="{{$p->getImage()}}" alt="">
-                                <div class="pi-meta">
-                                    <div class="pi-m-left">
-                                        <img src="{{asset("img/icons/eye.png")}}" alt="">
-                                        <p>quick view</p>
-                                    </div>
-                                    <div class="pi-m-right">
-                                        <img src="{{asset("img/icons/heart.png")}}" alt="">
-                                        <p>save</p>
-                                    </div>
-
-                            </div>
-                            </figure>
-                            <div class="product-info">
-                                <h6>{{$p->__get("product_name")}}</h6>
-                                <p>{{$p->getPrice()}}</p>
-                                <a href="/shopping-cart" onclick="addToCart({{$p->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <figure>
+                            <img src="{{$p->getImage()}}" alt="">
+                            <div class="pi-meta">
+                                <div class="pi-m-left">
+                                    <img src="{{asset("img/icons/eye.png")}}" alt="">
+                                    <p>quick view</p>
+                                </div>
+                                <div class="pi-m-right">
+                                    <img src="{{asset("img/icons/heart.png")}}" alt="">
+                                    <p>save</p>
+                                </div>
                             </div>
                         </figure>
                         <div class="product-info">
@@ -99,7 +83,6 @@
                         </div>
                     </div>
                 </div>
-
                 @empty
                     <p>No product found.</p>
                 @endforelse

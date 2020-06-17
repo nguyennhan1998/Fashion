@@ -57,7 +57,6 @@
                     </thead>
                     <tbody>
                     @foreach($products as $p)
-
                     <tr>
                         <td class="product-col">
                             <img src="{{$p->getImage()}}" alt="">
