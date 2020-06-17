@@ -1,228 +1,261 @@
 @extends("frontend.layout")
-@section("css")
-    <link rel="stylesheet" type="text/css" href="{{asset("plugins/flexslider/flexslider.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{asset("styles/product.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{asset("styles/product_responsive.css")}}">
-@endsection
-@section("script")
-    <script src="{{asset("js/jquery-3.2.1.min.js")}}"></script>
-    <script src="{{asset("styles/bootstrap-4.1.2/popper.js")}}"></script>
-    <script src="{{asset("styles/bootstrap-4.1.2/bootstrap.min.js")}}"></script>
-    <script src="{{asset("plugins/greensock/TweenMax.min.js")}}"></script>
-    <script src="{{asset("plugins/greensock/TimelineMax.min.js")}}"></script>
-    <script src="{{asset("plugins/scrollmagic/ScrollMagic.min.js")}}"></script>
-    <script src="{{asset("plugins/greensock/animation.gsap.min.js")}}"></script>
-    <script src="{{asset("plugins/greensock/ScrollToPlugin.min.js")}}"></script>
-    <script src="{{asset("plugins/OwlCarousel2-2.2.1/owl.carousel.js")}}"></script>
-    <script src={{asset("plugins/easing/easing.js")}}></script>
-    <script src="{{asset("plugins/progressbar/progressbar.min.js")}}"></script>
-    <script src="{{asset("plugins/parallax-js-master/parallax.min.js")}}"></script>
-    <script src="{{asset("plugins/flexslider/jquery.flexslider-min.js")}}"></script>
-    <script src="{{asset("js/product.js")}}"></script>
+@section("header")
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <!-- logo -->
+            <div class="site-logo">
+                <img src="{{asset("img/logo.png")}}" alt="logo">
+            </div>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="header-right">
+                <a href="cart.html" class="card-bag"><img src="{{asset("img/icons/bag.png")}}" alt=""><span>2</span></a>
+                <a href="#" class="search"><img src="{{asset("img/icons/search.png")}}" alt=""></a>
+            </div>
+            <!-- site menu -->
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">Man</a></li>
+                <li><a href="#">LookBook</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 @endsection
 @section("content")
-    <div class="home">
-        <div class="home_container d-flex flex-column align-items-center justify-content-end">
-            <div class="home_content text-center">
-                <div class="home_title">Product Page</div>
-                <div class="breadcrumbs d-flex flex-column align-items-center justify-content-center">
-                    <ul class="d-flex flex-row align-items-start justify-content-start text-center">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="category.html">Woman</a></li>
-                        <li>New Products</li>
-                    </ul>
-                </div>
+    <!-- Page Info -->
+    <div class="page-info-section page-info">
+        <div class="container">
+            <div class="site-breadcrumb">
+                <a href="">Home</a> /
+                <a href="">Sales</a> /
+                <a href="">Bags</a> /
+                <span>Shoulder bag</span>
             </div>
+            <img src="{{asset("img/page-info-art.png")}}" alt="" class="page-info-art">
         </div>
     </div>
+    <!-- Page Info end -->
 
-    <!-- Product -->
 
-    <div class="product">
+    <!-- Page -->
+    <div class="page-area product-page spad">
         <div class="container">
             <div class="row">
-
-                <!-- Product Image -->
                 <div class="col-lg-6">
-                    <div class="product_image_slider_container">
-                        <div id="slider" class="flexslider">
-                            <ul class="slides">
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-                                <li>
-                                    <img src="{{asset("images/product_image_1.jpg")}}"/>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="carousel_container">
-                            <div id="carousel" class="flexslider">
-                                <ul class="slides">
-                                    <li>
-                                        <div><img src="{{asset("images/product_1.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_2.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_3.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_4.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_5.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_6.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_7.jpg")}}"/></div>
-                                    </li>
-                                    <li>
-                                        <div><img src="{{asset("images/product_8.jpg")}}"/></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="fs_prev fs_nav disabled"><i class="fa fa-chevron-up" aria-hidden="true"></i>
-                            </div>
-                            <div class="fs_next fs_nav"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                    <figure>
+                        <img class="product-big-img" src="{{$product->getImage()}}" alt="">
+                    </figure>
+                    <div class="product-thumbs">
+                        <div class="product-thumbs-track">
+                            <div class="pt" data-imgbigurl="img/product/1.jpg"><img
+                                    src="{{asset("img/product/thumb-1.jpg")}}" alt=""></div>
+                            <div class="pt" data-imgbigurl="img/product/2.jpg"><img
+                                    src="{{asset("img/product/thumb-2.jpg")}}" alt=""></div>
+                            <div class="pt" data-imgbigurl="img/product/3.jpg"><img
+                                    src="{{asset("img/product/thumb-3.jpg")}}" alt=""></div>
+                            <div class="pt" data-imgbigurl="img/product/4.jpg"><img
+                                    src="{{asset("img/product/thumb-4.jpg")}}" alt=""></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Product Info -->
-                <div class="col-lg-6 product_col">
-                    <div class="product_info">
-                        <div class="product_name">Cool Clothing with Brown Stripes</div>
-                        <div class="product_category">In <a href="category.html">Category</a></div>
-                        <div class="product_rating_container d-flex flex-row align-items-center justify-content-start">
-                            <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                            <div class="product_reviews">4.7 out of (3514)</div>
-                            <div class="product_reviews_link"><a href="#">Reviews</a></div>
+                <div class="col-lg-6">
+                    <div class="product-content">
+                        <h2>{{$product->__get("product_name")}}</h2>
+                        <div class="pc-meta">
+                            <h4 class="price">{{$product->getPrice()}}</h4>
+                            <div class="review">
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star is-fade"></i>
+                                </div>
+                                <span>(2 reviews)</span>
+                            </div>
                         </div>
-                        <div class="product_price">$3<span>.99</span></div>
-                        <div class="product_size">
-                            <div class="product_size_title">Select Size</div>
-                            <ul class="d-flex flex-row align-items-start justify-content-start">
-                                <li>
-                                    <input type="radio" id="radio_1" disabled name="product_radio"
-                                           class="regular_radio radio_1">
-                                    <label for="radio_1">XS</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="radio_2" name="product_radio" class="regular_radio radio_2"
-                                           checked>
-                                    <label for="radio_2">S</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="radio_3" name="product_radio" class="regular_radio radio_3">
-                                    <label for="radio_3">M</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="radio_4" name="product_radio" class="regular_radio radio_4">
-                                    <label for="radio_4">L</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="radio_5" name="product_radio" class="regular_radio radio_5">
-                                    <label for="radio_5">XL</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="radio_6" disabled name="product_radio"
-                                           class="regular_radio radio_6">
-                                    <label for="radio_6">XXL</label>
-                                </li>
-                            </ul>
+                        <p>{{$product->__get("product_desc")}}</p>
+                        <div class="color-choose">
+                            <span>Colors:</span>
+                            <div class="cs-item">
+                                <input type="radio" name="cs" id="black-color" checked>
+                                <label class="cs-black" for="black-color"></label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" name="cs" id="blue-color">
+                                <label class="cs-blue" for="blue-color"></label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" name="cs" id="yollow-color">
+                                <label class="cs-yollow" for="yollow-color"></label>
+                            </div>
+                            <div class="cs-item">
+                                <input type="radio" name="cs" id="orange-color">
+                                <label class="cs-orange" for="orange-color"></label>
+                            </div>
                         </div>
-                        <div class="product_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec consequat lorem.
-                                Maecenas elementum at diam consequat bibendum. Mauris iaculis fringilla ex, sit amet
-                                semper libero facilisis sit amet. Nunc ut aliquet metus. Praesent pulvinar justo sed
-                                velit tempus bibendum. Quisque dictum lorem id mi viverra, in auctor justo laoreet. Nam
-                                at massa malesuada, ullamcorper metus vel, consequat risus. Phasellus ultricies velit
-                                vel accumsan porta.</p>
+                        <div class="size-choose">
+                            <span>Size:</span>
+                            <div class="sc-item">
+                                <input type="radio" name="sc" id="l-size" checked>
+                                <label for="l-size">L</label>
+                            </div>
+                            <div class="sc-item">
+                                <input type="radio" name="sc" id="xl-size">
+                                <label for="xl-size">XL</label>
+                            </div>
+                            <div class="sc-item">
+                                <input type="radio" name="sc" id="xxl-size">
+                                <label for="xxl-size">XXL</label>
+                            </div>
                         </div>
-                        <form method="POST" action="{{url("/cart/add/{$product->__get("id")}")}}">
-                            @method("POST")
-                            @csrf
-                            <div class="product_buttons">
-                                <div class="text-right d-flex flex-row align-items-start justify-content-start">
-                                    <div
-                                        class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-                                        <div>
-                                            <div><img src="{{asset("images/heart_2.svg")}}" class="svg" alt="">
-                                                <div>+</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <a href="/shopping-cart" onclick="addToCart({{$product->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <ul class="nav" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab"
+                                   aria-controls="tab-1" aria-selected="true">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab"
+                                   aria-controls="tab-2" aria-selected="false">Additional information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab"
+                                   aria-controls="tab-3" aria-selected="false">Reviews (0)</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- single tab content -->
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                                    quia dolor sit amet, consectetur, adipisci velit</p>
+                            </div>
+                            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                                    quia dolor sit amet, consectetur, adipisci velit</p>
+                            </div>
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
 
-                                        <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-                                            <button type="submit">
-                                            <div>
-                                                <div>
-
-                                                        <img src="{{asset("images/cart.svg")}}" class="svg" alt="">
-                                                        <div>+</div>
-                                                </div>
-                                            </div>
-                                            </button>
-                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center rp-title">
+                <h5>Related products</h5>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <figure>
+                            <img src="{{asset("img/products/1.jpg")}}" alt="">
+                            <div class="pi-meta">
+                                <div class="pi-m-left">
+                                    <img src="{{asset("img/icons/eye.png")}}" alt="">
+                                    <p>quick view</p>
+                                </div>
+                                <div class="pi-m-right">
+                                    <img src="{{asset("img/icons/heart.png")}}" alt="">
+                                    <p>save</p>
                                 </div>
                             </div>
-                        </form>
+                        </figure>
+                        <div class="product-info">
+                            <h6>Long red Shirt</h6>
+                            <p>$39.90</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <figure>
+                            <img src="{{asset("img/products/2.jpg")}}" alt="">
+                            <div class="bache">NEW</div>
+                            <div class="pi-meta">
+                                <div class="pi-m-left">
+                                    <img src="{{asset("img/icons/eye.png")}}" alt="">
+                                    <p>quick view</p>
+                                </div>
+                                <div class="pi-m-right">
+                                    <img src="{{asset("img/icons/heart.png")}}" alt="">
+                                    <p>save</p>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="product-info">
+                            <h6>Hype grey shirt</h6>
+                            <p>$19.50</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <figure>
+                            <img src="{{asset("img/products/3.jpg")}}" alt="">
+                            <div class="pi-meta">
+                                <div class="pi-m-left">
+                                    <img src="{{asset("img/icons/eye.png")}}" alt="">
+                                    <p>quick view</p>
+                                </div>
+                                <div class="pi-m-right">
+                                    <img src="{{asset("img/icons/heart.png")}}" alt="">
+                                    <p>save</p>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="product-info">
+                            <h6>long sleeve jacket</h6>
+                            <p>$59.90</p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <figure>
+                            <img src="{{asset("img/products/4.jpg")}}" alt="">
+                            <div class="bache sale">SALE</div>
+                            <div class="pi-meta">
+                                <div class="pi-m-left">
+                                    <img src="{{asset("img/icons/eye.png")}}" alt="">
+                                    <p>quick view</p>
+                                </div>
+                                <div class="pi-m-right">
+                                    <img src="{{asset("img/icons/heart.png")}}" alt="">
+                                    <p>save</p>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="product-info">
+                            <h6>Denim men shirt</h6>
+                            <p>$32.20 <span>RRP 64.40</span></p>
+                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Boxes -->
-
-    <div class="boxes">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="box d-flex flex-row align-items-center justify-content-start">
-                        <div class="mt-auto">
-                            <div class="box_image"><img src="{{asset("images/boxes_1.png")}}" alt=""></div>
-                        </div>
-                        <div class="box_content">
-                            <div class="box_title">Size Guide</div>
-                            <div class="box_text">Phasellus sit amet nunc eros sed nec tellus.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 box_col">
-                    <div class="box d-flex flex-row align-items-center justify-content-start">
-                        <div class="mt-auto">
-                            <div class="box_image"><img src="{{asset("images/boxes_2.png")}}" alt=""></div>
-                        </div>
-                        <div class="box_content">
-                            <div class="box_title">Shipping</div>
-                            <div class="box_text">Phasellus sit amet nunc eros sed nec tellus.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Page end -->
 @endsection
