@@ -37,4 +37,5 @@
 <script src="{{asset("js/pages/index.js")}}"></script>
 {{--sss--}}
 <!-- Demo Js -->
+{{--asdasd--}}
 <script src="{{asset("js/demo.js")}}"></script>

@@ -1,23 +1,25 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <x-frontend.head/>
 <body>
+<!-- Page Preloder -->
+<x-frontend.loader/>
 
-<!-- Menu -->
+<!-- Header section -->
+@yield("header")
+<!-- Header section end -->
 
-<x-frontend.menu/>
 
-<div class="super_container">
+@yield("content")
 
-    <!-- Header -->
 
-    <x-frontend.header/>
 
-    @yield("content")
-    <x-frontend.footer/>
+<x-frontend.footer/>
+<!-- Footer section end -->
 
-</div>
 
+<!--====== Javascripts & Jquery ======-->
 <x-frontend.scripts/>
 </body>
 </html>

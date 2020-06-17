@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="header">
                     <h2>
-                        NEW PRODUCT
+                        EDIT PRODUCT
                     </h2>
                     <ul class="header-dropdown m-r--5">
                         <li class="dropdown">
@@ -50,7 +50,7 @@
                     <label>Product Description</label>
                     <div class="form-group">
                         <div class="form-line">
-                                         <textarea name="product_desc" placeholder="Description.." class="form-control @error("product_desc") is-invalid @enderror">
+                            <textarea name="product_desc" placeholder="Description.." class="form-control @error("product_desc") is-invalid @enderror">
                             </textarea>
                             @error("product_desc")
                             <span class="error invalid-feedback">{{$message}}</span>
