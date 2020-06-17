@@ -28,6 +28,7 @@
         </div>
     </header>
 @section("content")
+
     <!-- Page Info -->
     <div class="page-info-section page-info-big">
         <div class="container">
@@ -35,6 +36,7 @@
             <div class="site-breadcrumb">
                 <a href="/home">Home</a> /
                 <span>{{$category->__get("category_name")}}</span>
+
             </div>
             <img src="{{asset("img/categorie-page-top.png")}}" alt="" class="cata-top-pic">
         </div>
@@ -67,6 +69,7 @@
             </div>
             <div class="row">
                 @forelse($products as $p)
+
                     <div class="col-lg-3">
                         <div class="product-item">
                             <figure>
@@ -80,15 +83,23 @@
                                         <img src="{{asset("img/icons/heart.png")}}" alt="">
                                         <p>save</p>
                                     </div>
-                                </div>
+
+                            </div>
                             </figure>
                             <div class="product-info">
                                 <h6>{{$p->__get("product_name")}}</h6>
                                 <p>{{$p->getPrice()}}</p>
                                 <a href="/shopping-cart" onclick="addToCart({{$p->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
                             </div>
+                        </figure>
+                        <div class="product-info">
+                            <h6>{{$p->__get("product_name")}}</h6>
+                            <p>{{$p->getPrice()}}</p>
+                            <a href="javascript:void(0);" onclick="addToCart({{$p->__get("id")}});" class="site-btn btn-line">ADD TO CART</a>
                         </div>
                     </div>
+                </div>
+
                 @empty
                     <p>No product found.</p>
                 @endforelse

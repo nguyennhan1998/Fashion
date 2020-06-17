@@ -57,23 +57,24 @@
                     </thead>
                     <tbody>
                     @foreach($products as $p)
-                        <tr>
-                            <td class="product-col">
-                                <img src="{{$p->getImage()}}" alt="">
-                                <div class="pc-title">
-                                    <h4>{{$p->__get("product_name")}}</h4>
-                                    <a href="#">Edit Product</a>
-                                </div>
-                            </td>
-                            <td class="price-col">{{$p->getPrice()}}</td>
-                            <td class="quy-col">
-                                <div class="quy-input">
-                                    <span>Qty</span>
-                                    <input type="number" value="{{$p->cart_qty}}">
-                                </div>
-                            </td>
-                            <td class="total-col">  ${{$p->cart_qty * $p->__get("price")}}</td>
-                        </tr>
+
+                    <tr>
+                        <td class="product-col">
+                            <img src="{{$p->getImage()}}" alt="">
+                            <div class="pc-title">
+                                <h4>{{$p->__get("product_name")}}</h4>
+                                <a href="#">Edit Product</a>
+                            </div>
+                        </td>
+                        <td class="price-col">{{$p->getPrice()}}</td>
+                        <td class="quy-col">
+                            <div class="quy-input">
+                                <span>Qty</span>
+                                <input type="number" value="{{$p->cart_qty}}">
+                            </div>
+                        </td>
+                        <td class="total-col">  ${{$p->cart_qty * $p->__get("price")}}</td>
+                    </tr>
                     @endforeach
                     </tbody>
                 </table>
