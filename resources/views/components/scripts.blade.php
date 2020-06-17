@@ -8,7 +8,6 @@
 
 <!-- Slimscroll Plugin Js -->
 <script src="{{asset("plugins/jquery-slimscroll/jquery.slimscroll.js")}}"></script>
-{{--///asdasd--asdasdasdasd}}
 <!-- Waves Effect Plugin Js -->
 <script src="{{asset("plugins/node-waves/waves.js")}}"></script>
 
@@ -37,4 +36,4 @@
 <script src="{{asset("js/pages/index.js")}}"></script>
 
 <!-- Demo Js -->
-<script src="{{asset("js/demo.js")}}"></script>
+
